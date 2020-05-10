@@ -1,3 +1,3 @@
-# simple-Jupyter-refactoring
+# simple-jupyter-notebooks-refactoring
 
-Code to support a first blog post about Jupyter notebooks refactoring
+Code to support the first blog post about Jupyter notebooks refactoring
