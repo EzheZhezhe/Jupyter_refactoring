@@ -1,6 +1,6 @@
 # Jupyter notebook refactoring #
 
-## Intro ##
+## Introduction ##
 
 All people in the world can be easily divided into three major categories:
 
@@ -10,11 +10,15 @@ All people in the world can be easily divided into three major categories:
 
 * those who have nave heard about Jupyter notebooks.
 
-My story will shed light on the first two groups. 
+My post is about the first two groups.
 
 ## Harsh reality ##
 
-Working as a Machine Learning Engineer I got this "famous" Untitled4.ipynb Jupyter notebook with more than 126 cells executed without order and a task to deploy the best model from it.
+ As a Machine Learning Engineer I was being tasked with machine learning models deployments. To my big surpirse, that time I got a "famous" [Untitled4.ipynb](https://twitter.com/vboykis/status/931212461436538881?s=20) with more than 126 cells executed in random order written by a Data Scientist, who recently left a company.
+
+## Solution ##
+
+
 
 
 
@@ -26,4 +30,4 @@ Working as a Machine Learning Engineer I got this "famous" Untitled4.ipynb Jupyt
 
 3. variables ---> proper names (show bad examples, good examples and the best ones)
 
-4. do not repeat yourself 
+4. do not repeat yourself ----> package code in fucntions or even classes and 
