@@ -7,7 +7,8 @@
 * [Step 1 Sanity check](#step-1-sanity-check)
 * [Step 2 Reproducible environment](#step-2-reproducible-environment)
 * [Step 3 Meaningful naming](#step-3-meaningful-naming)
-* [Useful links](#useful-links)
+* [Conclusion](#conclusion)
+* [Further reading](#further-reading)
 
 ### Introduction ###
 
@@ -44,9 +45,9 @@ tf.set_random_seed(seed_value)
 
 ### Step 3 Meaningful naming ###
 
-Make sure that even after one week you are still able to understand your code. Start with proper names of the  variables.
+Make sure that you are still able to understand your code even after one week is passed. Start with giving informative names to the variables.
 
-Bad practice in Python
+Bad practices in Python
 
 ```python
 import pandas as pd
@@ -57,7 +58,7 @@ x = df1[df1.col_x => 200]
 y = df1[(df1.col_x >= 200) & (df1.col_y == 'Drama')]
 ```
 
-Better practice in Python
+Good practices in Python
 
 ```python
 import pandas as pd
@@ -68,6 +69,16 @@ long_movies = movies[movies.duration => 200]
 long_drama_movies = movies[(movies.duration >=200) & (movies.genre == 'Drama')]
 ```
 
-### Useful links ###
+### Conclusion ###
 
-fgf
+In the first part of the series, we created a foundation for Jupyter notebooks refactoring. We started from sanity check (goal of your notebook), then moved to the reproducible environments, and lastly, to meaningful names of the variables.
+
+The next part will be fully devoted to functions.
+
+### Further reading ###
+
+* [Add Conda environment to your Jupyter notebook](https://medium.com/@nrk25693/how-to-add-your-conda-environment-to-your-jupyter-notebook-in-just-4-s*teps-abeab8b8d084)
+* [Add virtual environment to your Jupyter notebook](https://anbasile.github.io/posts/2017-06-25-jupyter-venv/)
+* [How to get reproducible ML results with Keras](https://machinelearningmastery.com/reproducible-results-neural-networks-keras/)
+* [Structure your data science project](http://drivendata.github.io/cookiecutter-data-science/)
+* [Enhance Jupyter Notebook’s productivity](https://towardsdatascience.com/bringing-the-best-out-of-jupyter-notebooks-for-data-science-f0871519ca29)
