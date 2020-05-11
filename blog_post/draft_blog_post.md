@@ -1,4 +1,4 @@
-# Jupyter notebook refactoring Part 0 #
+# Jupyter notebook refactoring - Part 1 #
 
 ## Table of contents ##
 
@@ -29,7 +29,10 @@ Before diving in refactoring answer one simple question: **What is the end goal 
 
 ### Step 2 Reproducible environment ###
 
-To prevent an upleasant situation "I don't know what do you mean, it works on my machine", make sure that you have a reproducible environment. For Python you can use conda, virtual environments or docker containers. On top of it, your code can depend on the random number generators from different libraries. To get the same results more than once, set all the random number generators:
+To prevent an upleasant situation "I don't know what do you mean, it works on my machine", make sure that you have a reproducible environment. For Python you can use conda, virtual environments or docker containers.
+
+Moreover, your code can have dependencies on the random number generators from different libraries. To get the same results more than once, set the seed value.
+For example, in Python:
 
 ```python
 import numpy as np
@@ -41,8 +44,30 @@ tf.set_random_seed(seed_value)
 
 ### Step 3 Meaningful naming ###
 
-variables ---> proper names (show bad examples, good examples and the best ones)
+Make sure that even after one week you are still able to understand your code. Start with proper names of the  variables.
+
+Bad practice in Python
+
+```python
+import pandas as pd
+...
+df1 = pd.read_csv(path)
+...
+x = df1[df1.col_x => 200]
+y = df1[(df1.col_x >= 200) & (df1.col_y == 'Drama')]
+```
+
+Better practice in Python
+
+```python
+import pandas as pd
+...
+movies = pd.read_csv(path)
+...
+long_movies = movies[movies.duration => 200]
+long_drama_movies = movies[(movies.duration >=200) & (movies.genre == 'Drama')]
+```
 
 ### Useful links ###
 
-fgfg
+fgf
