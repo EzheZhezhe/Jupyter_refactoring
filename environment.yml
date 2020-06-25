@@ -5,3 +5,5 @@ dependencies:
   - ipykernel
   - numpy
   - pandas
+  - python=3.8
+  
