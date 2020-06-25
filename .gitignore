@@ -107,3 +107,6 @@ dmypy.json
 
 # IDEs
 **/.vscode/
+
+# MacOs
+.DS_Store
