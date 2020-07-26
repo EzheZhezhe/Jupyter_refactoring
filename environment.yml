@@ -2,8 +2,12 @@ name: juprefser
 channels:
   - defaults
 dependencies:
+  - black
   - matplotlib
+  - mypy
+  - notebook
   - numpy
   - pandas
+  - pylint
   - python=3.8
   
