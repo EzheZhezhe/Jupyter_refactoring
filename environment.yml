@@ -1,4 +1,4 @@
-name: juprefser
+name: jupyter_refactoring
 channels:
   - defaults
 dependencies:

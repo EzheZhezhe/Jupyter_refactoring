@@ -1,7 +1,7 @@
 .ONESHELL:
 
 SHELL=/bin/bash
-CONDA_ENV_NAME ?=juprefser
+CONDA_ENV_NAME ?=jupyter_refactoring
 CONDA_ACTIVATE=source $$(conda info --base)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME) 
 
 create:
@@ -11,7 +11,9 @@ add-to-jupyter:
 	$(CONDA_ACTIVATE) && python -s -m ipykernel install --user --name $(CONDA_ENV_NAME)
 
 run:
-	$(CONDA_ACTIVATE) && jupyter notebook notebooks/juprefser_notebook.ipynb
+	$(CONDA_ACTIVATE) && jupyter notebook
 	
+remove-from-jupyter: 
+	jupyter kernelspec uninstall $(CONDA_ENV_NAME)
 
-all: create add-to-jupyter run
+
