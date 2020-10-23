@@ -1,0 +1,20 @@
+name: jupyter-refactoring
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - black
+  - jupyterlab
+  - matplotlib
+  - mypy
+  - numpy
+  - pandas
+  - pylint
+  - pytest
+  - python=3.8
+  - seaborn
+  - scipy
+  - scikit-learn
+  - pip:
+    - ipytest
+  
